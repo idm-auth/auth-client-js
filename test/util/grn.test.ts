@@ -1,4 +1,4 @@
-import { parseGrn, stringifyGrn, isValidGrn } from './grn';
+import { parseGrn, stringifyGrn, isValidGrn } from '../../src/util/grn';
 
 describe('parseGrn', () => {
   it('should parse complete GRN', () => {
