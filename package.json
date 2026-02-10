@@ -16,7 +16,9 @@
     "test:coverage": "vitest --run --coverage --coverage.reporter=text",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "type-check": "npx tsc --noEmit --strict"
+    "type-check": "npx tsc --noEmit --strict",
+    "deps:check": "ncu",
+    "deps:update": "ncu -u"
   },
   "keywords": [
     "idm",
@@ -47,6 +49,7 @@
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
+    "npm-check-updates": "^19.3.2",
     "prettier": "^3.6.2",
     "typescript": "^5.9.3",
     "vitest": "^4.0.13"
