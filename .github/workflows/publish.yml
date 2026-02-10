@@ -7,6 +7,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: prod
     permissions:
       contents: read
       id-token: write
@@ -28,12 +29,5 @@ jobs:
       - name: Build
         run: npm run build
       
-      - name: Debug OIDC Token
-        run: |
-          echo "GitHub Repository: ${{ github.repository }}"
-          echo "GitHub Ref: ${{ github.ref }}"
-          echo "GitHub Actor: ${{ github.actor }}"
-          echo "Environment: prod"
-      
-      - name: Publish to NPM (Trusted Publishing)
+      - name: Publish to NPM
         run: npm publish --provenance --access public
