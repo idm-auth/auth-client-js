@@ -5,7 +5,7 @@ HTTP client library for IDM authentication and authorization.
 ## Installation
 
 ```bash
-npm install @idm-auth/client
+npm install @idm-auth/auth-client
 ```
 
 ## Quick Start
@@ -15,7 +15,7 @@ This library requires you to provide an HTTP client implementation. You can use 
 ### Using Built-in FetchHttpClient
 
 ```typescript
-import { validateAuthentication, FetchHttpClient } from '@idm-auth/client';
+import { validateAuthentication, FetchHttpClient } from '@idm-auth/auth-client';
 
 const httpClient = new FetchHttpClient(5000); // 5 second timeout
 
@@ -44,7 +44,7 @@ import {
   authorize,
   IHttpClient,
   HttpOptions,
-} from '@idm-auth/client';
+} from '@idm-auth/auth-client';
 import axios from 'axios';
 
 class AxiosHttpClient implements IHttpClient {
