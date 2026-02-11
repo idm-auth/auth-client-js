@@ -1,7 +1,7 @@
 FROM debian:trixie
 
 ARG DEV_USER=dev-user
-ARG NODE_VERSION=22
+ARG NODE_VERSION=24
 ARG DOCKER_GID=995
 
 RUN apt update -qq \

@@ -39,8 +39,11 @@
     "url": "https://github.com/idm-auth/auth-client-js/issues"
   },
   "homepage": "https://github.com/idm-auth/auth-client-js#readme",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "devDependencies": {
-    "@tsconfig/node22": "^22.0.5",
+    "@tsconfig/node24": "^24.0.0",
     "@types/node": "^25.2.3",
     "@typescript-eslint/eslint-plugin": "^8.55.0",
     "@typescript-eslint/parser": "^8.55.0",
