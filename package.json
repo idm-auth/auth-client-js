@@ -1,6 +1,6 @@
 {
   "name": "@idm-auth/auth-client",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "type": "module",
   "description": "IDM Authentication & Authorization Client - HTTP client for remote validation",
   "main": "dist/index.js",
