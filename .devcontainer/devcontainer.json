@@ -1,0 +1,69 @@
+{
+  "name": "auth-client-js",
+  "service": "workspace",
+  "dockerComposeFile": "docker-compose.yml",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "dev-user",
+  "initializeCommand": "sh .devcontainer/scripts/preCreate.sh",
+  "postAttachCommand": "sh .devcontainer/scripts/postAttachCommand.sh",
+  "postStartCommand": "sh .devcontainer/scripts/postStartCommand.sh",
+  "overrideCommand": true,
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "amazonQ.enableLocalIndex": true,
+        "workbench.colorCustomizations": {
+          "activityBar.background": "#021db5cb",
+          "activityBar.activeBackground": "#021db5cb",
+          "activityBar.inactiveForeground": "#ffffff",
+          "statusBar.background": "#021db5cb",
+          "statusBar.foreground": "#ffffff"
+        },
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": [
+          "source.fixAll.eslint"
+        ],
+        "eslint.validate": [
+          "javascript",
+          "typescript"
+        ],
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "typescript.autoImportSuggestions.enabled": true,
+        "javascript.autoImportSuggestions.enabled": true,
+        "typescript.preferences.expandTypeAliases": true,
+        "editor.inlayHints.enabled": "on",
+        "editor.hover.enabled": true,
+        "editor.hover.delay": 300,
+        "editor.hover.sticky": true,
+        "vitest.enable": true,
+        "vitest.commandLine": "npx vitest",
+        "vitest.include": [
+          "src/**/*.test.ts",
+          "tests/**/*.test.ts"
+        ],
+        "vitest.exclude": [
+          "node_modules/**",
+          "dist/**"
+        ],
+        "typescript.preferences.includePackageJsonAutoImports": "auto",
+        "typescript.suggest.autoImports": true,
+        "remote.autoForwardPorts": false
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig",
+        "wayou.vscode-todo-highlight",
+        "mk12.better-git-line-blame",
+        "AmazonWebServices.amazon-q-vscode",
+        "vitest.explorer"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+# Source files (only dist/ is needed)
+src/
+.docs/
+
+# Config files
+tsconfig.json
+tsconfig.build.json
+vitest.config.mjs
+eslint.config.mjs
+prettier.config.mjs
+build.mjs
+rollup.config.mjs
+
+# Development
+.devcontainer/
+.amazonq/
+.env*
+*.local
+
+# Tests
+**/*.test.ts
+**/*.spec.ts
+coverage/
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/
+
+# Docs (keep only README.md)
+authentication-authorization-lib.md
+
+# Dependencies
+node_modules/
+
+# Build artifacts
+*.tgz

@@ -1,0 +1,14 @@
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: containers/workspace/Dockerfile
+    hostname: auth-client-js
+    volumes:
+      - ..:/workspace:consistent
+    networks:
+      - private-network
+    
+networks:
+  private-network:
+    driver: bridge

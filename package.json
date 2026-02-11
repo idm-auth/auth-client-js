@@ -1,0 +1,69 @@
+{
+  "name": "@idm-auth/auth-client",
+  "version": "0.1.16",
+  "type": "module",
+  "description": "IDM Authentication & Authorization Client - HTTP client for remote validation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prebuild": "npm install --no-save",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run build:js && npm run build:types",
+    "build:js": "node build.mjs",
+    "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly --declaration --declarationMap",
+    "test": "vitest --run",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --run --coverage --coverage.reporter=text",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "type-check": "npx tsc --noEmit --strict",
+    "deps:check": "ncu",
+    "deps:update": "ncu -u"
+  },
+  "keywords": [
+    "idm",
+    "iam",
+    "authentication",
+    "authorization",
+    "jwt",
+    "policy",
+    "rbac"
+  ],
+  "author": "IDM Auth Team",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idm-auth/auth-client-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idm-auth/auth-client-js/issues"
+  },
+  "homepage": "https://github.com/idm-auth/auth-client-js#readme",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.0",
+    "@types/node": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.55.0",
+    "@typescript-eslint/parser": "^8.55.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "esbuild": "^0.27.3",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "npm-check-updates": "^19.3.2",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.69.0",
+    "@opentelemetry/sdk-node": "^0.211.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
